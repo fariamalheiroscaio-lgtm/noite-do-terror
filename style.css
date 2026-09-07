@@ -1,0 +1,788 @@
+
+/* ========================================
+   FONTES
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse at center,
+        transparent 45%,
+        rgba(0, 0, 0, 0.35) 70%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1 {
+    font-family: 'Nosifer', cursive;
+}
+
+h2 {
+    font-family: 'Creepster', cursive;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background:
+        linear-gradient(
+            90deg,
+            #050505,
+            #100306,
+            #050505
+        );
+
+    padding: 22px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #3a080f;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.6);
+
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    color: #d90429;
+    font-size: 36px;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 5px rgba(217, 4, 41, 0.8),
+        0 0 15px rgba(217, 4, 41, 0.5),
+        0 0 30px rgba(217, 4, 41, 0.25);
+
+    transition: text-shadow 0.3s ease;
+}
+
+header h1:hover {
+    text-shadow:
+        0 0 5px rgba(217, 4, 41, 1),
+        0 0 20px rgba(217, 4, 41, 0.8),
+        0 0 40px rgba(217, 4, 41, 0.5);
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d90429;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d90429;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+section {
+    padding: 70px 10%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #d90429;
+}
+
+
+/* Categorias de filmes */
+
+
+.categoria {
+    background-color: #111111;
+    border-top: 1px solid #2a2a2a;
+}    
+
+ 
+.categoria h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(217, 4, 41, 0.4);
+}
+.categoria > p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    font-size: 17px;
+    color: #bbbbbb;
+}
+
+
+
+
+   /* ========================================
+   INÍCIO / HERO
+======================================== */
+
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background:
+    radial-gradient(circle at 75% 50%, rgba(217, 4, 41, 0.18), transparent 35%),
+    radial-gradient(circle at 20% 80%, rgba(80, 0, 0, 0.25), transparent 40%),
+    linear-gradient(135deg, #050505, #0b0b0b 50%, #160509);
+}
+
+.hero h2 {
+    font-size: 52px;
+    white-space: nowrap;
+    letter-spacing: 3px;
+
+    color: #d90429;
+
+    text-shadow:
+        0 0 5px rgba(217, 4, 41, 0.8),
+        0 0 15px rgba(217, 4, 41, 0.6),
+        0 0 30px rgba(217, 4, 41, 0.35);
+}
+.hero p {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+.texto-hero {
+    flex: 1;
+}
+
+.imagem-hero {
+    flex: 1.2;
+    display: flex;
+    gap: 20px;
+}
+
+.imagem-hero img {
+ width: 50%;
+ height: 400px;
+object-fit: cover;
+border-radius: 12px; 
+border: 2px solid #333333;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+opacity: 0.8;
+filter: brightness(0.8) contrast(1.1);
+
+}
+.imagem-hero img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(217, 4, 41, 0.35);
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.botao {
+    display: inline-block;
+    background-color: #d90429;
+    color: #ffffff;
+    text-decoration: none;
+
+    padding: 13px 28px;
+    border-radius: 6px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    box-shadow: 0 0 15px rgba(217, 4, 41, 0.35);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #a60320;
+    box-shadow: 0 0px 15px rgba(217, 4, 41, 0.7);
+    box-shadow: 0 0 30px rgba(217, 4, 41, 0.35);
+    transform: translateY(-4px);
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.card h3 {
+    color: #d90429;
+    margin-bottom: 10px;
+}
+
+.filme-card h3 {
+    color: #d90429;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   CARDS DOS FILMES
+======================================== */
+
+.filme-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: linear-gradient(135deg, #1a1a1a, #080808);
+
+    padding: 30px;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.texto-filme {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 10px;
+}
+
+.filme-card img {
+    width: 220px;
+    height: 310px;
+    object-fit: cover;
+    flex-shrink: 1;
+
+    border-radius: 10px;
+    border: 2px solid #222222;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg,  #1a1a1a, #121212)
+    
+}
+.filme-card img:hover {
+    transform: scale(1.05);
+    border-color: #d90429;
+    box-shadow: 0 8px 20px rgba(217, 4, 41, 0.35);
+}
+
+.filme-card:hover {
+    transform: translateY(-5px);
+     border-color: #d90429;
+    box-shadow: 0 10px 25px rgba(217, 4, 41, 0.25);
+}
+
+
+/* ========================================
+   GALERIA DO HORROR
+======================================== */
+
+.galeria {
+    Padding: 70PX 8%;
+    background-color: #080808;
+}
+ 
+.titulo-galeria {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-galeria h2 {
+    
+ font-family: 'Creepster', cursive;
+    font-size: 36px;
+    color: #d90429;
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 5px rgba(217, 4, 41, 0.6),
+        0 0 15px rgba(217, 4, 41, 0.3);
+}
+
+.titulo-galeria p {
+    font-size: 17px;
+    color: #aaa;
+}
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+   position: relative;
+    width: 100%;
+   height: 400px;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #222;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+
+    font-family: 'Creepster', cursive;
+    font-size: 24px;
+
+    opacity: 0;
+    transform: translateY(100%);
+
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.galeria-item:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(35%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.galeria-item:hover img {
+    filter: brightness(200%);
+    transform: scale(1.05);
+}
+.galeria-item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px  15px 15px;
+
+    color: white;
+    font-size: 19px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.95)
+    );
+    opacity: 0.9;
+}
+ .galeria-item:hover {
+    transform: translateY(-10px);
+    border-color: #b30000;
+    box-shadow:
+        0 10px 30px rgba(180, 0, 0, 0.6);
+
+}
+
+
+
+
+/* ========================================
+   CONTATO
+======================================== */
+#contato {
+text-align: center;
+background-color: #0b0b0b;
+}
+
+#contato h2 {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+#contato p {
+max-width: 600px;
+margin: 0 auto 30px;
+color: #bbbbbb;
+}
+#contato a {
+    display: inline-block;
+    background-color: #d90429;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#contato a:hover {
+    background-color: #a60320;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(217, 4, 41, 0.5);
+}
+
+
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+z-index: 5;
+    background-color: #050505;
+    padding: 40px 10%;
+    text-align: center;
+    
+}
+footer p {
+    color: #888888;
+    font-size: 14px;
+}
+.creditos {
+    background: #050505;
+    padding: 60px 20px 30px;
+    text-align: center;
+    border-top: 1px solid #300008;
+    box-shadow: 0 -10px 30px rgba(80, 0, 10, 0.25);
+}
+
+.creditos h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 38px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 12px rgba(150, 0, 20, 0.8);
+    margin-bottom: 15px;
+}
+
+.creditos p {
+    color: #888;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.linha-creditos {
+    width: 120px;
+    height: 1px;
+    background: #66000d;
+    margin: 25px auto;
+    box-shadow: 0 0 8px rgba(180, 0, 20, 0.5);
+}
+
+.creditos-final {
+    font-size: 12px !important;
+    color: #555 !important;
+}
+
+.aviso {
+    margin-top: 30px !important;
+    color: #6b0010 !important;
+    font-family: 'Creepster', cursive;
+    font-size: 18px !important;
+}
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 6%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+
+    /* MENU */
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 15px;
+    }
+
+
+    /* SEÇÕES */
+
+    section {
+        padding: 50px 6%;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+        white-space: normal;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .texto-hero {
+        width: 100%;
+    }
+
+
+    /* IMAGENS DO HERO */
+
+    .imagem-hero {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .imagem-hero img {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* CATEGORIAS */
+
+    .categoria h2 {
+        font-size: 32px;
+    }
+
+    .categoria > p {
+        font-size: 16px;
+    }
+
+
+    /* CARDS DOS FILMES */
+
+    .filme-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .filme-card h3 {
+        font-size: 25px;
+    }
+
+    .texto-filme {
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .filme-card img {
+        width: 100%;
+        height: 350px;
+    }
+/* galeria */
+.galeria {
+        padding: 60px 5%;
+    }
+
+    .titulo-galeria h2 {
+        font-size: 35px;
+    }
+
+
+    .galeria-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    
+    }
+
+
+
+    /* CONTATO */
+
+    #contato {
+        text-align: center;
+    }
+
+    #contato h2 {
+        font-size: 34px;
+    }
+
+    #contato p {
+        font-size: 16px;
+    }
+
+    #contato a {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+
+    /* RODAPÉ */
+
+    footer {
+        padding: 30px 6%;
+    }
+}
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .categoria h2 {
+        font-size: 28px;
+    }
+
+    .filme-card {
+        padding: 18px;
+    }
+
+    .filme-card h3 {
+        font-size: 23px;
+    }
+
+    .filme-card img {
+        height: 300px;
+    }
+
+}
+/* ========================================
+   EFEITO HOVER DA GALERIA
+======================================== */
+
+.galeria-item {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(180, 0, 0, 0.6);
+}
+
+.galeria-item img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.6);
+}
