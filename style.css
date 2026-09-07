@@ -786,3 +786,6 @@ footer p {
     transform: scale(1.08);
     filter: brightness(0.6);
 }
+html {
+    scroll-behavior: smooth;
+}
